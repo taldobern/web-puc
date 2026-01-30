@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: clinic_chatbot
+    ports:
+      - "5432:5432"
+    volumes:
+      - clinic_chatbot_db:/var/lib/postgresql/data
+
+volumes:
+  clinic_chatbot_db:
